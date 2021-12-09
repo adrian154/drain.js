@@ -74,9 +74,6 @@ const sqrt = Math.sqrt;
 const cbrt = Math.cbrt;
 
 // vector ops
-const length = vector => sqrt(vector.reduce((accum, cur) => accum + cur * cur, 0));
-const dot = (A, B) => A.reduce((accum, cur, index) => accum + cur * B[index], 0);
-
 const add = (A, B) => zipWith(A, B, (x, y) => x + y);
 const sub = (A, B) => zipWith(A, B, (x, y) => x - y);
 const dot = (A, B) => zipWith(A, B, (x, y) => x * y);
