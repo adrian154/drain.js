@@ -56,7 +56,8 @@ const round = Math.round,
 const abs = Math.abs,
       pow = Math.pow,
       max = Math.max,
-      min = Math.min;
+      min = Math.min,
+      sign = Math.sign;
 
 // random funcs
 // todo: various distributions (normal, etc.)
