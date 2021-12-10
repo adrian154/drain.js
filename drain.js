@@ -138,7 +138,7 @@ const linReg = (xlist, ylist, population) => {
     const sdx = xlist.stddev(), sdy = ylist.stddev();
     const r = zipWith(xlist, ylist, (x, y) => (x - xbar) / sdx * (y - ybar) / sdy).sum() / BesselCorrect(xlist.length, population);
 
-    return {slope, intercept, r, regEq: linear(slope, intercept)};
+    return {slope, intercept, r, regEq: LinearEquation(slope, intercept)};
 
 };
 
