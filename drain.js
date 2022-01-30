@@ -84,6 +84,11 @@ const div = (A, B) => zipWith(A, B, (x, y) => x / y);
 const lengthSquared = vec => dot(vec, vec);
 const length = vec => sqrt(lengthSquared(vec));
 
+// matrix
+// matrices are stored as arrays of rows
+const col = (mat, c) => mat.map(row => row[c]);
+const mmul = (A, B) => A.map(row => row.map((_, i) => dot(row, col(B, i))));
+
 // combinatorics
 const factorial = n => {
     let r = 1;
