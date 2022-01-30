@@ -77,7 +77,7 @@ const cbrt = Math.cbrt;
 // vector ops
 const add = (A, B) => zipWith(A, B, (x, y) => x + y);
 const sub = (A, B) => zipWith(A, B, (x, y) => x - y);
-const dot = (A, B) => zipWith(A, B, (x, y) => x * y);
+const dot = (A, B) => zipWith(A, B, (x, y) => x * y).sum();
 const mul = dot;
 const div = (A, B) => zipWith(A, B, (x, y) => x / y);
 
